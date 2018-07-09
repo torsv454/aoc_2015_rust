@@ -1,0 +1,7 @@
+[package]
+name = "aoc_2015_rust"
+version = "0.1.0"
+authors = ["Tord <tord.svensson@gmail.com>"]
+
+[dependencies]
+rust-crypto = "^0.2"
