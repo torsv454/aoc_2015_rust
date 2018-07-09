@@ -13,11 +13,3 @@ pub fn slurp(file: &str) -> String {
 pub fn input(day: usize) -> String {
     slurp(&format!("src/bin/day{}/input.txt", day))
 }
-
-#[cfg(test)]
-mod tests {
-    #[test]
-    fn it_works() {
-        assert_eq!(2 + 2, 4);
-    }
-}
