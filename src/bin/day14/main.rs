@@ -76,12 +76,12 @@ mod tests {
 
     #[test]
     fn day14_part1_correct_answer() {
-        assert_eq!(part1(&input(14, TIME_LIMIT)), 2696);
+        assert_eq!(part1(&input(14), TIME_LIMIT), 2696);
     }
 
     #[test]
     fn day14_part2_correct_answer() {
-        assert_eq!(part2(&input(14, TIME_LIMIT)), 1084);
+        assert_eq!(part2(&input(14), TIME_LIMIT), 1084);
     }
 
 }
