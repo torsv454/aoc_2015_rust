@@ -70,12 +70,12 @@ mod tests {
     use super::*;
 
     #[test]
-    fn day4_part1_correct_answer() {
+    fn day12_part1_correct_answer() {
         assert_eq!(part1(&input(12)), 191164);
     }
 
     #[test]
-    fn day4_part2_correct_answer() {
+    fn day12_part2_correct_answer() {
         assert_eq!(part2(&input(12)).unwrap(), 87842);
     }
 
