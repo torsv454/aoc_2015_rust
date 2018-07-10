@@ -1,9 +1,7 @@
 extern crate aoc_2015_rust;
 use aoc_2015_rust::*;
 
-
 const TIME_LIMIT: u32 = 2503;
-
 
 struct Reindeer {
     speed: u32,
@@ -66,11 +64,10 @@ fn part2(input: &str, time_limit: u32) -> u32 {
     reindeers.iter().fold(0, |r, n| std::cmp::max(r, n.points))
 }
 
-
 fn main() {
     let input = input(14);
-    println!("AoC 2015 Day 14, Part 1: {}", part1(&input,TIME_LIMIT));
-    println!("AoC 2015 Day 14, Part 2: {}", part2(&input,TIME_LIMIT));
+    println!("AoC 2015 Day 14, Part 1: {}", part1(&input, TIME_LIMIT));
+    println!("AoC 2015 Day 14, Part 2: {}", part2(&input, TIME_LIMIT));
 }
 
 #[cfg(test)]
@@ -79,12 +76,12 @@ mod tests {
 
     #[test]
     fn day14_part1_correct_answer() {
-        assert_eq!(part1(&input(14,TIME_LIMIT)), 2696);
+        assert_eq!(part1(&input(14, TIME_LIMIT)), 2696);
     }
 
     #[test]
     fn day14_part2_correct_answer() {
-        assert_eq!(part2(&input(14,TIME_LIMIT)), 1084);
+        assert_eq!(part2(&input(14, TIME_LIMIT)), 1084);
     }
 
 }
