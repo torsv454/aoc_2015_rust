@@ -117,7 +117,7 @@ fn perform2(cmd: &Cmd, lights: &mut [u64]) {
 }
 
 fn part1(input: &str) -> usize {
-    let mut lights: [u64; 1_000_000] = [0; 1_000_000];
+    let mut lights: Vec<u64> = vec![0; 1_000_000];
     let cmds = parse(input);
 
     for c in &cmds {
@@ -128,7 +128,7 @@ fn part1(input: &str) -> usize {
 }
 
 fn part2(input: &str) -> u64 {
-    let mut lights: [u64; 1_000_000] = [0; 1_000_000];
+    let mut lights: Vec<u64> = vec![0; 1_000_000];
     let cmds = parse(input);
     for c in &cmds {
         perform2(&c, &mut lights);
@@ -146,28 +146,27 @@ fn main() {
 #[cfg(test)]
 mod tests {
     use super::*;
-    // WTF, why does this overflow stack as a test but not when run?
-    //#[test]
-    //fn day6_part1_samples() {
-    //    assert_eq!(part1("turn on 0,0 through 999,999"), 1_000_000);
-    //    assert_eq!(part1("toggle 0,0 through 999,0"), 1_000);
-    //    assert_eq!(part1("turn off 499,499 through 500,500"), 0);
-    //}
+    #[test]
+    fn day6_part1_samples() {
+        assert_eq!(part1("turn on 0,0 through 999,999"), 1_000_000);
+        assert_eq!(part1("toggle 0,0 through 999,0"), 1_000);
+        assert_eq!(part1("turn off 499,499 through 500,500"), 0);
+    }
 
-    //#[test]
-    //fn day6_part1_correct_answer() {
-    //    assert_eq!(part1(&input(6)), 377891);
-    // }
+    #[test]
+    fn day6_part1_correct_answer() {
+        assert_eq!(part1(&input(6)), 377891);
+    }
 
-    //#[test]
-    //fn day6_part2_samples() {
-    //    //assert_eq!(part2("turn on 0,0 through 0,0"), 1);
-    //    assert_eq!(part2("toggle 0,0 through 999,0"), 1_000);
-    //    assert_eq!(part2("toggle 0,0 through 999,999"), 2_000_000);
-    //}
+    #[test]
+    fn day6_part2_samples() {
+        assert_eq!(part2("turn on 0,0 through 0,0"), 1);
+        assert_eq!(part2("toggle 0,0 through 999,0"), 2_000);
+        assert_eq!(part2("toggle 0,0 through 999,999"), 2_000_000);
+    }
 
-    //#[test]
-    //fn day6_part2_correct_answer() {
-    //    assert_eq!(part2(&input(6)), 14110788);
-    //}
+    #[test]
+    fn day6_part2_correct_answer() {
+        assert_eq!(part2(&input(6)), 14110788);
+    }
 }
