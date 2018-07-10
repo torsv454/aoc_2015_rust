@@ -1,0 +1,2 @@
+Sue 1: cats: 8, pomeranians: 2, trees: 5, goldfish: 4
+Sue 2: akitas: 9, children: 3, samoyeds: 9
